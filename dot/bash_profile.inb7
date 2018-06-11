@@ -1,0 +1,8 @@
+#   Python 3.6 setup
+for p in \
+    '/c/Program Files/Python36/' \
+    '/c/Program Files/Python36/Scripts' \
+    '~/AppData/Roaming/Python/Python36/Scripts' \
+; do
+    [[ -d $p ]] && [[ $PATH =~ $p ]] || PATH="$p:$PATH"
+done
